@@ -1,0 +1,15 @@
+<html>
+<head>
+  <title>Django File Upload</title>
+</head>
+<body>
+<a href="/home">Назад к списку</a>
+<p>
+<h1>Новое изображение</h1></p>
+<form method="POST" class="post-form" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="save btn btn-default">Отправить</button>
+</form>
+</body>
+</html>
